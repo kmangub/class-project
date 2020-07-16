@@ -44,7 +44,7 @@ return document.write('<h3>' + response + '</h3>')
 function getCount() {
     var count = prompt('How many star wars movies have you watched?');
 // ( false || false)
-    while (isNan(count) || count === '') {
+    while (isNaN(count) || count === '') {
         count = prompt('please enter a number! How many star wars movies have you watched?');
     }
 
@@ -52,10 +52,10 @@ function getCount() {
 }
 
  function getStarCount(){
-    var starCount = prompt('How many stars would you rate the experience? 1 to 5. ')
+    var starCount = prompt('How many stars would you rate the experience? 1 to 5. ');
     
-    while(isNan(count) || count === ''){
- count = prompt('please enter a number! How would you rate that experience?');
+    while(isNaN(starCount) || starCount === ''){
+ count = prompt('Please enter a number! How would you rate that experience?');
 }
 return starCount
 }
@@ -77,11 +77,12 @@ function showRating(){
     var starCount = getStarCount();
   
     for (var i = 0; i < starCount; i++){
-      result = result + '<p><img src="images/star.png"></p>';
+      result = result + '<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Golden_star.svg/803px-Golden_star.svg.png"></p>';
     }
   
     return document.write(result);
   }
+  
 //I want a white cake with lavender frosting and lemon filling.
 function buildCake(cakeType, frostingType, fillingType){
     var message = 'I want a ' + cakeType + 'cake with ' + frostingType + ' frosting and' + fillingType + ' filling.';
